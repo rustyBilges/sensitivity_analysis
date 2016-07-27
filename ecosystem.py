@@ -13,7 +13,7 @@ import scipy.spatial
 from web import Network
 from individual import Individual
 
-from configure import ROWS, COLUMNS, MAX_HABITATS, HABITATS, OCCUPIED_CELLS, LOST_HABITAT
+from configure import ROWS, COLUMNS, MAX_HABITATS, HABITATS, OCCUPIED_CELLS#, LOST_HABITAT
 from configure import MOVE_RADIUS, MOVE_RADIUS_MUTUALISTS, CAPTURE_PROB, REPRODUCTION_RATE
 from configure import INVADER_NUMBER, DOUBLE_HERBIVORY, MATING_SPATIAL_RATIO, INMIGRATION
 from configure import HABITAT_LOSS_TYPE, DISPERSAL_KERNEL, SPATIAL_VARIATION
@@ -293,9 +293,10 @@ class Ecosystem():
         #show()
     
     
-    def apply_habitat_loss(self, type=HABITAT_LOSS_TYPE):
+    def apply_habitat_loss(self, LOST_HAB, type=HABITAT_LOSS_TYPE):
         
-	cells_to_loose = floor((ROWS*COLUMNS)*LOST_HABITAT)
+	#cells_to_loose = floor((ROWS*COLUMNS)*LOST_HABITAT)
+	cells_to_loose = floor((ROWS*COLUMNS)*LOST_HAB)
 	lost_habitat = 0
 	
 	if type==1:
