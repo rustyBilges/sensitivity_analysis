@@ -28,7 +28,7 @@ NETWORK_RESET = 0.1
 #whether to calculate the metrics for quantifying spatial variation among species
 SPATIAL_VARIATION = True
 
-RECORD_SPATIAL_VAR = 5000 #500
+RECORD_SPATIAL_VAR = ITERATIONS * 2 ## such that spatial aggreation metrics are never evaluated of saved (output_space_X.csv not exist)
 
 #the fraction of points to remove that are farthest from the centroid of the population
 #before calculating the population radius
