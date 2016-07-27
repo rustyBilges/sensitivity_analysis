@@ -34,9 +34,9 @@ if __name__ == '__main__':
 	    #job = '1' #os.environ['JOB_ID'];
 	    #task = '1' #os.environ['SGE_TASK_ID'];   CHANGE!
 	    
-	    job = os.environ['PBS_JOBID'];
-	    job = job[0:7]
-	    task = os.environ['PBS_ARRAYID'];
+	    #job = os.environ['PBS_JOBID'];
+	    #job = job[0:7]
+	    #task = os.environ['PBS_ARRAYID'];
 	    
 	    output_dir = '../HL_%d/p_run%d' %(HL,p_id) 
 
@@ -192,7 +192,8 @@ if __name__ == '__main__':
 		    ecosystem.apply_habitat_loss(HL/100.)
 
 		##calculate spatial variation metrics
-		if SPATIAL_VARIATION and (i%RECORD_SPATIAL_VAR == 0 or i == ITERATIONS):
+		#if SPATIAL_VARIATION and (i%RECORD_SPATIAL_VAR == 0 or i == ITERATIONS):
+		if SPATIAL_VARIATION and (i%RECORD_SPATIAL_VAR == 0): 
 		    start = datetime.now()
 		    write_spatial_analysis(ecosystem, i, output_dir)
 		    write_spatial_state(ecosystem,i, output_dir)

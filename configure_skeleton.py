@@ -140,10 +140,6 @@ SRC_NET_FILE = 'initial_network.graphml'
 
 #############################################################################################################
 ## THESE PARAMETERS TO BE SET MANUALLY:
-LOST_HABITAT = 0.000000
-MUTUALISM = 0.000000
 HABITAT_LOSS_TYPE = 2 
 
 
-#############################################################################################################
-## THESE PARAMETERS ARE WRITEN FROM LATIN_PARAMS.CSV

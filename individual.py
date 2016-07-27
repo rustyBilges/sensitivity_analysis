@@ -5,7 +5,8 @@ from configure import MAX_RESOURCE, MIN_RESOURCE, LIVING_EXPEND, SYNTHESIS_ABILI
 from configure import MATING_RESOURCE, MATING_ENERGY, EFFICIENCY_TRANSFER, HERBIVORY_EFFICIENCY, HERBIVORY_FRACTION
 from configure import MUTUALISTIC_EFFICIENCY, MUTUALISTIC_COOLING, MIN_MUTUALISTIC_EFF, MUTUALISTIC_LOSS, MUT_PRODUCER_LOSS
 
-from random import randint
+#from random import randint
+from random import uniform as randint  ## Because varying min/max_resource by non-interger steps causes problems
 
 class Individual():
     
